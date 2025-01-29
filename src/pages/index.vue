@@ -39,7 +39,7 @@ import {ref} from "vue";
 const title = ("Bienvenue à l'exercice 1");
 const description = ("Cet exercice teste le rendu déclaratif et les liaisons d'attributs.");
 const isHighlighted = ref(false);
-
+//fin exo 1
 </script>
 
  <style scoped lang="sass">
