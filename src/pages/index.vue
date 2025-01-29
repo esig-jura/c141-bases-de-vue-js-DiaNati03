@@ -1,4 +1,4 @@
-<template>
+ <template>
   <v-container max-width="700">
     <!-- Donnée de l'exercice -->
     <exercice1-donnee />
@@ -9,7 +9,7 @@
       <!-- Carte statique à transformer -->
       <v-card class="mx-auto my-6 pa-2" max-width="400">
         <!-- Remplacez *** TITRE *** par un contenu dynamique -->
-        <v-card-title>*** TITRE ***</v-card-title>
+        <v-card-title>{{ title }}</v-card-title>
 
         <!-- Remplacez *** DESCRIPTION *** par un contenu dynamique avec une liaison de style -->
         <v-card-subtitle style="color: black;">
