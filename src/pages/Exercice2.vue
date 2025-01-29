@@ -42,6 +42,8 @@
 // Importation du composant contenant la donnée de l'exercice
 import Exercice2Donnee from "@/components/donnees/Exercice2Donnee.vue";
 
+import {ref} from "vue";
+
 // Données préparées pour l'exercice
 const title = "Bienvenue à l'exercice 2"
 const description = "Cet exercice teste la gestion des événements et l'interaction avec les formulaires."

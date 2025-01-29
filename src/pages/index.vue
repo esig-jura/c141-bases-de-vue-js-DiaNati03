@@ -12,14 +12,15 @@
         <v-card-title>{{ title }}</v-card-title>
 
         <!-- Remplacez *** DESCRIPTION *** par un contenu dynamique avec une liaison de style -->
-        <v-card-subtitle style="color: black;">
-          *** DESCRIPTION ***
+        <v-card-subtitle :class="{blue: isHighlighted}" >
+          {{description}}
         </v-card-subtitle>
 
         <!-- Rendez ce bouton fonctionnel pour changer la couleur -->
         <v-card-actions>
-          <v-btn color="primary">
-            Mettre en surbrillance
+          <v-btn @click="isHighlighted = !isHighlighted" color="primary">
+            <span v-if="!isHighlighted">Mettre en surbrillance</span>
+            <span v-else>Réinitialiser la couleur</span>
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -33,8 +34,18 @@ import Exercice1Donnee from "@/components/donnees/Exercice1Donnee.vue";
 
 // Données préparées pour l'exercice
 // SUGGESTION : Pensez à rendre ces données réactives pour qu'elles puissent être mises à jour dynamiquement.
+import {ref} from "vue";
 
-const title = "Bienvenue à l'exercice 1";
-const description = "Cet exercice teste le rendu déclaratif et les liaisons d'attributs.";
-const isHighlighted = false;
+const title = ("Bienvenue à l'exercice 1");
+const description = ("Cet exercice teste le rendu déclaratif et les liaisons d'attributs.");
+const isHighlighted = ref(false);
+
 </script>
+
+ <style scoped lang="sass">
+
+ .blue
+  color : blue
+
+
+ </style>
